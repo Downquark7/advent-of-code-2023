@@ -1,0 +1,13 @@
+time gcc -Ofast main.c && time ./a.out
+
+________________________________________________________
+Executed in   54.09 millis    fish           external
+   usr time   39.98 millis  355.00 micros   39.63 millis
+   sys time   13.88 millis    0.00 micros   13.88 millis
+
+Sum: 54473
+
+________________________________________________________
+Executed in    1.03 millis    fish           external
+   usr time    1.06 millis  261.00 micros  801.00 micros
+   sys time    0.00 millis    0.00 micros    0.00 micros
