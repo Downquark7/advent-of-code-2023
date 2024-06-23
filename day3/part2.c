@@ -10,7 +10,7 @@
 #define WIDTH 140
 
 void readFile(char grid[140][WIDTH + 1]) {
-    FILE *fp = fopen("../puzzle.txt", "r");
+    FILE *fp = fopen("puzzle.txt", "r");
     char *line = NULL;
     size_t len = WIDTH + 1;
     ssize_t read;
@@ -71,8 +71,8 @@ int leftNum(char grid[140][WIDTH + 1], int r, int c) {
 // }
 
 int getRatioPart2(char grid[140][WIDTH + 1], int locations[8], int r, int c) {
-    int rOffsets[] = {-1, 0, 1, -1, 1, -1, 0, 1};
-    int cOffsets[] = {-1, -1, -1, 0, 0, 1, 1, 1};
+    int cOffsets[] = {-1, 0, 1, -1, 1, -1, 0, 1};
+    int rOffsets[] = {-1, -1, -1, 0, 0, 1, 1, 1};
     for (int i = 0; i < 8; i++) {
         if (locations[i]) {
             locations[i] = 0;
@@ -96,8 +96,8 @@ int getRatioPart2(char grid[140][WIDTH + 1], int locations[8], int r, int c) {
 //567
 int getRatio(char grid[140][WIDTH + 1], int r, int c) {
     int locations[] = {0, 0, 0, 0, 0, 0, 0, 0};
-    int rOffsets[] = {-1, 0, 1, -1, 1, -1, 0, 1};
-    int cOffsets[] = {-1, -1, -1, 0, 0, 1, 1, 1};
+    int cOffsets[] = {-1, 0, 1, -1, 1, -1, 0, 1};
+    int rOffsets[] = {-1, -1, -1, 0, 0, 1, 1, 1};
     for (int i = 0; i < 8; i++)
         locations[i] = checkBounds(r + rOffsets[i], c + cOffsets[i]) && isNum(grid[r + rOffsets[i]][c + cOffsets[i]]);
     for (int i = 0; i < 8; i++) {
