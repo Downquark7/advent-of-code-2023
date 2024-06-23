@@ -7,7 +7,7 @@
 #include <string.h>
 
 void readFile(char grid[140][141]) {
-    FILE *fp = fopen("../puzzle.txt", "r");
+    FILE *fp = fopen("puzzle.txt", "r");
     char *line = NULL;
     size_t len = 141;
     ssize_t read;
